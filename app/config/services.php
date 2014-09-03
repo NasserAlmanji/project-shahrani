@@ -15,16 +15,15 @@ return array(
 	*/
 
 
-	'mandrill' => array(
+/*	'mandrill' => array(
 		'secret' => 'eO_Kjgu85C-4fRbjMGjhMQ',
 	),
 
 
-/*	'mailgun' => array(
+	'mailgun' => array(
 		'domain' => 'sandbox90547ceaf8b94946a799f6f281ab1cc5.mailgun.org',
 		'secret' => '640b23359ef796da9426516f590dc1e9',
 	),
-
 
 	'stripe' => array(
 		'model'  => 'User',
