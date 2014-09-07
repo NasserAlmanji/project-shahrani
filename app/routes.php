@@ -147,3 +147,7 @@ Route::get('/papertail', function() {
 
 	$monolog->pushHandler($syslog);
 });
+
+Route::get('/EventsPaperTrail', function() {
+	return Redirect::to("https://papertrailapp.com/events");
+});
