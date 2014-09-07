@@ -66,7 +66,9 @@ class PostsController extends \BaseController {
 		$post = new Post();
 		$post->body = $postBody;
 		$post->company_id = $companyID;
-		$post->type = $postType;
+		$post->message_type = $postType;
+		$post->type_long_short_quick = $type_long_short_quick;
+		$post->message_state-> = $message_state;
 		$post->save();
 
 		return Redirect::to('home')->with(array('Messagetype'=>'success','message'=> 'post was successfully published'));

@@ -14,6 +14,6 @@
 		<div>
 			الرجاء النقر على الوصلة في الأدنى لتفعيل الحساب:
 		</div>
-		{{ 'http://ahleeen.com/activate/'.$activationCode.'/'.$email }}
+		{{ URL::to('/').'/activate/'.$activationCode.'/'.$email}}
 	</body>
 </html>

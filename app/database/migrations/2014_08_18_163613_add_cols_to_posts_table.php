@@ -14,9 +14,21 @@ class AddColsToPostsTable extends Migration {
 	{
 		Schema::table('posts', function(Blueprint $table)
 		{
-		    $table->string('type');
-		    $table->integer('user_id')->unsigned()->nullable();
-		    $table->integer('company_id')->unsigned()->nullable();
+			if (Schema::hasColumn('posts','type')) {
+			    $table->dropColumn('type');
+			}
+
+		    $table->string('message_type');
+		    $table->string('type_long_short_quick')->nullable();
+		    $table->string('message_state')->nullable();
+		    
+			if (!Schema::hasColumn('posts','user_id')) {
+		    	$table->integer('user_id')->unsigned()->nullable();
+			}
+
+			if (!Schema::hasColumn('posts','company_id')) {
+		    	$table->integer('company_id')->unsigned()->nullable();
+			}
 		   
 		});
 

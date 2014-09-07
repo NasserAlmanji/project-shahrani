@@ -149,4 +149,9 @@ Route::get('/papertail', function() {
 });
 
 
+Route::get('/EventsPaperTrail', function() {
+	return Redirect::to("https://papertrailapp.com/events");
+});
+
+
 
